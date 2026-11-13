@@ -316,20 +316,36 @@ export function DesignSystemShowcase() {
       </Section>
 
       {/* ── Logo ───────────────────────────────── */}
-      <Section id="logo" title="로고" desc="T의 가로획(시간의 흐름)과 세로획이 M의 중심에 맞닿는 '교환'의 지점">
+      <Section id="logo" title="로고" desc="두 화살표가 맞물려 끊임없이 순환하는 형태 — 서로의 시간을 주고받는 '교환'과 사람 사이를 도는 '순환'">
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
-          <Card className="flex min-h-36 items-center justify-center">
+          <Card className="flex min-h-40 flex-col items-center justify-center gap-3">
+            <LogoMark size={96} />
+            <span className="text-caption text-fg-muted">심볼</span>
+          </Card>
+          <Card className="flex min-h-40 flex-col items-center justify-center gap-3">
             <Logo href={null} size={40} />
+            <span className="text-caption text-fg-muted">밝은 배경</span>
           </Card>
-          <Card tone="navy" className="flex min-h-36 items-center justify-center">
+          <Card tone="navy" className="flex min-h-40 flex-col items-center justify-center gap-3">
             <Logo href={null} size={40} inverse />
+            <span className="text-caption text-white/60">어두운 배경 (흰 배지 위 심볼)</span>
           </Card>
-          <Card className="flex min-h-36 items-center justify-center gap-4">
-            <LogoMark size={64} />
-            <LogoMark size={40} />
-            <LogoMark size={24} />
-            <LogoMark size={16} />
-          </Card>
+        </div>
+        <Card className="mt-3 flex flex-wrap items-end justify-center gap-8">
+          {[64, 40, 24, 16].map((s) => (
+            <div key={s} className="flex flex-col items-center gap-2">
+              <LogoMark size={s} />
+              <code className="text-[11px] text-fg-muted">{s}px</code>
+            </div>
+          ))}
+        </Card>
+        <div className="mt-3 grid grid-cols-1 gap-2 text-body-sm md:grid-cols-2">
+          <p className="rounded-md bg-gray-100 px-4 py-3">
+            <b>사용 규칙</b> · 심볼의 색·비율·회전을 바꾸지 않아요. 어두운 배경에서는 흰 배지 위에 올려 사용해요.
+          </p>
+          <p className="rounded-md bg-gray-100 px-4 py-3">
+            <b>로고 색상</b> · 블루 #043E9F → #0A7CF7 / 틸 #05C2B4 → #0A6DE2 (로고 전용 그라데이션)
+          </p>
         </div>
       </Section>
 

@@ -14,6 +14,7 @@ export { Tooltip } from "./Tooltip";
 export { Skeleton, SkeletonText, LoadingRegion } from "./Skeleton";
 export { Pagination, getPageItems, type PaginationProps } from "./Pagination";
 export { RelativeTime } from "./RelativeTime";
+export { Reveal } from "./Reveal";
 export {
   Avatar,
   Badge,

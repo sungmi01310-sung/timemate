@@ -27,7 +27,7 @@ timemate/
 | 경로 | 내용 |
 |---|---|
 | `app/globals.css` | **디자인 토큰** (Tailwind `@theme`: 컬러·타이포·radius·shadow·애니메이션) + `page-container`, `focus-ring` 유틸 |
-| `components/brand` | 로고 (T+M 심볼) |
+| `components/brand` | 로고: 두 화살표가 맞물려 순환하는 심볼(SVG). 원본 이미지·SVG는 `docs/brand/` |
 | `components/common` | Button, Input / PasswordInput / SearchInput / Textarea, Select, Modal / ConfirmModal, Toaster, Dropdown, Tooltip, Skeleton, Pagination, Badge, Avatar, Tabs, Chip, Rating, EmptyState / ErrorState, Card, SectionHeader, Spinner, RelativeTime |
 | `components/domain` | TalentCard(+Skeleton), ProfileCard(+Skeleton), CoinCard, ReviewCard, PostCard, ChatMessage, NotificationItem, Calendar, TradeStatusBadge |
 | `components/layout` | AppShell, Header(다크 네이비), MobileMenu(햄버거), Navigation(하단 탭), Sidebar, Footer, PageHeader, ComingSoon |

@@ -134,6 +134,17 @@
   --animate-rise: rise 200ms var(--ease-out);
   --animate-sheet: sheet 240ms var(--ease-out);
   --animate-shimmer: shimmer 1.4s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-alt: float-alt 7s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes float-alt {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(9px); }
+  }
 
   @keyframes fade-in {
     from { opacity: 0; }
@@ -187,6 +198,12 @@
   max-width: calc(80rem + var(--gutter) * 2);
   margin-inline: auto;
   padding-inline: var(--gutter);
+}
+
+/* 스크롤 등장 효과 (Reveal 컴포넌트가 화면 밖 요소에만 붙였다가 보이면 제거) */
+@utility reveal-pending {
+  opacity: 0;
+  transform: translateY(24px);
 }
 
 /* 키보드 포커스 링 (Sub Point) */
