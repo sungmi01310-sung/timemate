@@ -1,0 +1,13 @@
+{
+  "name": "timemate",
+  "private": true,
+  "description": "TimeMate — 시간으로 재능을 교환하는 플랫폼 (Next.js + NestJS)",
+  "scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "npm run start:dev --prefix backend",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend",
+    "lint": "npm run lint --prefix frontend && npm run lint --prefix backend",
+    "test": "npm test --prefix backend"
+  }
+}
